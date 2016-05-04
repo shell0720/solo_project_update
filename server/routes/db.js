@@ -5,7 +5,7 @@ var mongoURI =
  process.env.MONGOLAB_URI ||
  process.env.MONGOHQ_URL ||
  'mongodb://localhost/kappa_solo'||
- 'mongodb://<dbuser>:<dbpassword>@ds011281.mlab.com:11281/heroku_2fqjbh41';
+ 'mongodb://dbuser:ds011281.mlab.com:11281/heroku_2fqjbh41';
 
 var MongoDB = mongoose.connect(mongoURI).connection;
 
