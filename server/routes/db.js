@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 var mongoURI =
  process.env.MONGOLAB_URI ||
  process.env.MONGOHQ_URL ||
- // 'mongodb://localhost/kappa_solo'||
+  //'mongodb://localhost/kappa_solo'||
  'mongodb://Michelle:ds013192.mlab.com:13192/heroku_q4vl9pg4';
 
 var MongoDB = mongoose.connect(mongoURI).connection;
