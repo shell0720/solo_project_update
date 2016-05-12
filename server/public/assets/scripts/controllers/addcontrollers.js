@@ -1,4 +1,4 @@
-myApp.controller("AddController", ["$scope", "$https", "DataService", function($scope, $http, DataService){
+myApp.controller("AddController", ["$scope", "$http", "DataService", function($scope, $http, DataService){
   //set variables to store objects
     $scope.randomWord = [];
     $scope.data = [];
@@ -7,7 +7,7 @@ myApp.controller("AddController", ["$scope", "$https", "DataService", function($
 //search synoym and antynom
     $scope.search = function(data){
       console.log("We are going to go look for ", data);
-      $https.get("http://words.bighugelabs.com/api/2/784ce18f8301cae5e5e361a7ec795aca/" + data.name + "/json").then(function(response){
+      $http.get("http://words.bighugelabs.com/api/2/784ce18f8301cae5e5e361a7ec795aca/" + data.name + "/json").then(function(response){
           console.log(response.data);
           $scope.data = [];
           $scope.data.push(response.data);
@@ -17,7 +17,7 @@ myApp.controller("AddController", ["$scope", "$https", "DataService", function($
 //search chinese-english
     $scope.look = function(data){
       console.log("We are going to go look for ", data);
-      $https.get("http://fanyi.youdao.com/openapi.do?keyfrom=shell0720&key=1801546933&type=data&doctype=json&version=1.1&q="+ data.name).then(function(response){
+      $http.get("http://fanyi.youdao.com/openapi.do?keyfrom=shell0720&key=1801546933&type=data&doctype=json&version=1.1&q="+ data.name).then(function(response){
           console.log(response.data);
           $scope.vocabulary = [];
           $scope.vocabulary.push(response.data);
