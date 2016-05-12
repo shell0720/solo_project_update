@@ -1,4 +1,4 @@
-myApp.controller("AddController", ["$scope", "$http", "DataService", function($scope, $http, DataService){
+myApp.controller("AddController", ["$scope", "$https", "DataService", function($scope, $http, DataService){
   //set variables to store objects
     $scope.randomWord = [];
     $scope.data = [];
