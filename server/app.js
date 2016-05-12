@@ -21,7 +21,7 @@ app.use(session({
     key: "user",
     resave: true,
     s: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: {maxAge: 600000000, secure: false}
 }));
 
