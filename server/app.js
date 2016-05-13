@@ -21,12 +21,9 @@ app.use(session({
     key: "user",
     resave: true,
     s: false,
-<<<<<<< HEAD
-    cookie: {maxAge: 6000000000000000, secure: false}
-=======
     saveUninitialized: false,
     cookie: {maxAge: 600000000, secure: false}
->>>>>>> 40cfde870767457aceacaa1163621e75ee86f3f0
+
 }));
 
 app.use(cookieParser());
