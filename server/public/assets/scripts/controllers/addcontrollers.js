@@ -49,9 +49,4 @@ myApp.controller("AddController", ["$scope", "$http", "DataService", function($s
         $scope.exercise = {};
     };
 
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 40cfde870767457aceacaa1163621e75ee86f3f0
 }]);
