@@ -1,0 +1,65 @@
+
+  <md-content layout-padding>
+    <div class= "publishBack">
+
+
+      <div style="width : 90%; margin: 0 auto; padding-bottom: 30px;">
+        <div layout-align="center center" layout="column">
+          <h1 class="md-display-2" >Days of Our Lives</h1>
+      </div>
+      <div ng-repeat="post in publishEntered.response | orderBy: '-time'">
+
+            <md-card class = "diaryCard">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">
+                        {{ post.name }}
+                        </span>
+                        <div>
+                            {{ post.time | date:'M/d/yyyy  HH:mm'}}
+                        </div>
+                  </md-card-title-text>
+                </md-card-title>
+
+                <md-card-content>
+                  <div>
+                    <h3>
+                        Title: {{ post.title }}
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        Original Created On: {{ post.date | date:'M/d/yyyy'}}
+                    </h3>
+                  </div>
+                  <div>
+                    <h3>
+                        Weather: {{ post.weather }}
+                    </h3>
+                  </div>
+
+                  <div>
+                    <h3>
+                        Content:
+                    </h3>
+                    <p>
+                        {{ post.content }}
+                    </p>
+                  </div>
+                </md-card-content>
+
+          <md-card-actions layout="row" layout-align="end center">
+             <md-button  class="md-primary md-warn" ng-click="deletePublish(post)">Delete</md-button>
+
+             </div>
+
+
+
+          </md-card-actions>
+
+      </md-card>
+    </div>
+  </div>
+</div>
+
+</md-content>
