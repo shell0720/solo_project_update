@@ -17,7 +17,7 @@ myApp.controller("AddController", ["$scope", "$http", "DataService", function($s
 //search chinese-english
     $scope.look = function(data){
       console.log("We are going to go look for ", data);
-      $http.get("http://fanyi.youdao.com/openapi.do?keyfrom=shell0720&key=1801546933&type=data&doctype=json&version=1.1&q="+ data.name).then(function(response){
+      $http.get("http://fanyi.youdao.com/openapi.do?keyfrom=SOLOPROJECT&key=738623174&type=data&doctype=json&version=1.1&q="+ data.name).then(function(response){
           console.log(response.data);
           $scope.vocabulary = [];
           $scope.vocabulary.push(response.data);

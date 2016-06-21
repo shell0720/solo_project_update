@@ -5,7 +5,7 @@ var mongoURI =
 
   //process.env.MONGOLAB_URI ||
   //process.env.MONGOHQ_URL ||
- //'mongodb://localhost/kappa_solo'||
+ 'mongodb://localhost/kappa_solo'||
  'mongodb://Xiaoran:123@ds013192.mlab.com:13192/heroku_q4vl9pg4';
 
 
