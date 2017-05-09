@@ -33,6 +33,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
+
 //PASSPORT SESSION
 passport.serializeUser(function(user, done){
     done(null, user.id);

@@ -14,6 +14,26 @@ myApp.controller("AddController", ["$scope", "$http", "DataService", function($s
           $scope.words ={};
       });
     };
+ //weather api
+    $scope.searchM = function(data){
+      console.log("We are going to go look for ", data);
+      // $http.get("http://www.dictionaryapi.com/api/v1/references/collegiate/xml/" +data.name+ "?key=2586e310-c6c3-495b-a8bf-fe7c2388fe98" ).then(function(response){
+      //     console.log(response.data );
+      //     $scope.dataM = [];
+      //     $scope.dataM.push(response.data);
+      //
+      //     $scope.wordsM ={};
+
+        $http.get("http://api.apixu.com/v1/current.json?key=00235fb6a5b24212bfb211430170905&q="+data.name).then(function(response){
+            console.log(response.data );
+            $scope.dataM = [];
+            $scope.dataM.push(response.data);
+
+            $scope.wordsM ={};
+
+
+      });
+    };
 //search chinese-english
     $scope.look = function(data){
       console.log("We are going to go look for ", data);

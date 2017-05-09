@@ -108,11 +108,38 @@
           <input ng-model="words.name" type="text" placeholder="Search a word" />
           <md-button class="md-flat" ng-click="search(words)">find the antynom and synoym</md-button>
         </form>
+
         <div ng-repeat="word in data">
             <p> nouns syn : {{ word.noun.syn[0] }}      |          ant : {{ word.noun.ant[0] }} </p>
             <p> adverb syn : {{ word.adverb.syn[0]}}     |          ant : {{ word.adverb.ant[0]}} </p>
             <p> verb syn : {{ word.verb.syn[0]}}     |           ant : {{ word.verb.ant[0]}} </p>
             <p> adj syn : {{ word.adjective.syn[0]}}     |        ant : {{ word.adjective.ant[0]}} </p>
+        </div>
+
+        <form>
+          <input ng-model="wordsM.name" type="text" placeholder="Search a city" />
+          <md-button class="md-flat" ng-click="searchM(wordsM)">Look Up the weather </md-button>
+        </form>
+
+        <div  ng-repeat="word in dataM">
+
+          <p id="m">
+        city:   {{word.location.name}}</p>
+          <p>
+        weather:  {{word.current.condition.text}}
+          </p>
+          <p>
+          humidity:   {{word.current.humidity}}
+          </p>
+          <p>
+          feels like:   {{word.current.feelslike_c}}
+          </p>
+          <p>
+          tempreture:  {{word.current.temp_c}}
+
+
+          </p>
+
         </div>
         </p>
   </div>

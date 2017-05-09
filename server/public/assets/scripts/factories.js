@@ -116,6 +116,8 @@ myApp.factory("DataService", ["$http", function($http){
   // }
   };
 
+  
+
     getUser();
 
     return {
